@@ -1,0 +1,160 @@
+:root {
+    --background-color: rgb(37, 240, 255);
+    --cassette-color: #222;
+}
+
+main {
+    background-color: var(--background-color);
+}
+
+.cassette {
+    background-color: var(--cassette-color);
+    position: relative;
+    width: 508px;
+    height: 300px;
+    border-radius: 16px;
+}
+
+.cassette-bottom {
+    background-color: #333;
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    height: 72px;
+}
+
+.cassette-bottom-left {
+    left: 20%;
+    transform: skew(-20deg);
+    border-top-left-radius: 20px;
+}
+
+.cassette-bottom-right {
+    background-color: #333;
+    position: absolute;
+    bottom: 0;
+    right: 20%;
+    transform: skew(20deg);
+    border-top-right-radius: 20px;
+}
+
+.cassette-label {
+    background-color: white;
+    position: relative;
+    width: calc(100% - 32px);
+    height: 196px;
+    margin: 16px;
+    border-radius: 20px;
+}
+
+.cassette-label-lines {
+    position: absolute;
+    top: 36px;
+    left: 0;
+    width: 100%;
+    height: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cassette-label-line {
+    background-color: #ccc;
+    width: 88%;
+    height: 2px;
+}
+
+.cassette-label-strips {
+    position: absolute;
+    top: 84px;
+    left: 0;
+    width: 100%;
+    height: 72px;
+}
+
+.cassette-label-strip {
+    width: 100%;
+    height: 20%;
+}
+
+.cassette-label-strip.red {
+    background-color: rgb(255, 19, 102);
+}
+
+.cassette-label-strip.yellow {
+    background-color: rgb(255, 226, 60);
+}
+
+.cassette-label-strip.green {
+    background-color: rgb(23, 235, 168);
+}
+
+.cassette-label-strip.blue {
+    background-color: rgb(24, 132, 255);
+}
+
+.cassette-label-strip.orange {
+    background-color: orange;
+}
+
+.cassette-hole-container {
+    background-color: var(--cassette-color);
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    width: 60%;
+    height: 72px;
+    transform: translate(-50%, -50%);
+    border-radius: 36px;
+}
+
+.cassette-hole {
+    background-color: var(--background-color);
+    position: absolute;
+    top: 50%;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.cassette-hole-left {
+    left: 10px;
+    transform: translate(0, -50%);
+}
+
+.cassette-hole-right {
+    right: 10px;
+    transform: translate(0, -50%);
+}
+
+.cassette-glass {
+    background-color: var(--background-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 44%;
+    height: 52px;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.cassette-glass-glimmer {
+    background: linear-gradient(-30deg, transparent 40%, rgba(255, 255, 255, 0.7) 50%, transparent 60%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translate(12px, 0);
+    z-index: 2;
+}
+
+.cassette-reel {
+    background-color: color-mix(in srgb, var(--background-color) 15%, var(--cassette-color));
+    width: 120px;
+    height: 120px;
+    transform: translate(-76px, -34px);
+    border-radius: 50%;
+}
